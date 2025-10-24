@@ -1,29 +1,13 @@
-total_compras_exitosas=0
+monto = float (input ("ingresa el monto disponible a invertir"))
 saldo=0
-monto=0
-terminar=False
-print("su saldo es: ",input("cual es su saldo inicial: "))
+print ("saldo disponible es:", saldo)
+saldo = float (input ("ingresa la cantidad que deseas invertir en esta compra:"))
+
+terminar = False
 
 while not terminar:
-    print("su inversion es: ", input("cuanto desea invertir: "))
-
-    if monto<saldo:
-
-        total_compras_exitosas+1
-    saldo=saldo-monto
-    print("se realizo la compra")
-    if saldo ==0:
-
-            terminar=True
-
-        elif:
-        print("no se pudo realizar la compra")
-        terminar=True
-
-
-        print("el total de compras exitosas es: "), total_compras_exitosas
-        print("el saldo restante es: "), saldo 
-
-
-
-
+    if monto > saldo and monto > 0:
+        print ("compra realizada, saldo restante", saldo)
+    elif monto < saldo and monto < 0:
+        print ("el monto debe ser mayor que 0")
+    terminar=True
